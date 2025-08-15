@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>For Gunnu ❤️</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+    :root{
+      --bg1:#0f1724;
+      --bg2:#1a2235;
+      --accent:#ff6b81;
+      --soft:#ffd6e0;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      height:100vh;
+      display:grid;
+      place-items:center;
+      background: linear-gradient(-45deg, var(--bg1), var(--bg2), #1c2738, var(--bg1));
+      background-size: 400% 400%;
+      animation: bgMove 18s ease infinite;
+      color:#fff;
+      overflow:hidden;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    @keyframes bgMove{
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+    .card{
+      width:min(880px,95vw);
+      background:rgba(15,23,36,0.85);
+      border-radius:20px;
+      padding:30px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      position:relative;
+      border:1px solid rgba(255,255,255,0.08);
+      animation: fadeIn 1.2s ease forwards;
+    }
+    @keyframes fadeIn{
+      from{opacity:0;transform:scale(0.9)}
+      to{opacity:1;transform:scale(1)}
+    }
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+    }
+    .avatar{
+      width:78px;height:78px;border-radius:50%;
+      display:grid;place-items:center;font-weight:700;font-size:28px;
+      background:linear-gradient(135deg,var(--accent),#ff9fb8);
+      color:#2b0b12;
+      box-shadow:0 6px 18px rgba(255,107,129,0.3);
+    }
+    h1{margin:0;font-size:22px}
+    p.lead{margin:6px 0 0;color:var(--soft)}
+    .message{
+      margin-top:20px;
+      padding:22px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.05);
+      font-size:20px;
+      line-height:1.7;
+      font-family: 'Dancing Script', cursive;
+      animation: slideUp 1.4s ease forwards;
+      text-shadow: 0 0 8px rgba(255,107,129,0.3);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+    }
+    @keyframes slideUp{
+      from{transform:translateY(30px);opacity:0}
+      to{transform:translateY(0);opacity:1}
+    }
+    .heart{color:var(--accent);}
+    .hearts{position:absolute;inset:0;pointer-events:none}
+    .floating-heart{
+      position:absolute;
+      animation: floatUp linear infinite;
+      opacity:0.9;
+      will-change:transform,opacity;
+      text-shadow: 0 4px 18px rgba(0,0,0,0.35);
+    }
+    @keyframes floatUp{
+      0%{transform:translateY(100%) rotate(0deg);opacity:0}
+      8%{opacity:1}
+      100%{transform:translateY(-120%) rotate(360deg);opacity:0}
+    }
+    footer{display:flex;gap:12px;align-items:center;margin-top:18px}
+    .btn{
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.08);
+      padding:10px 14px;
+      border-radius:10px;
+      cursor:pointer;
+      color:inherit;
+      font-weight:600;
+      transition:all 0.3s;
+    }
+    .btn:hover{background:rgba(255,255,255,0.05)}
+    .btn.primary{
+      background:linear-gradient(90deg,var(--accent),#ff9fb8);
+      color:#2b0b12;
+      border:none;
+      box-shadow:0 8px 24px rgba(255,107,129,0.2);
+    }
+    .btn.primary:hover{transform:scale(1.05)}
+    .bubble{
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.05);
+      font-size:14px;
+    }
+
+    /* subtle shine effect on header */
+    .shine {
+      position:relative;
+      overflow:hidden;
+    }
+    .shine::after{
+      content:"";
+      position:absolute;
+      left:-60%;
+      top:0;
+      height:100%;
+      width:60%;
+      background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.06), rgba(255,255,255,0));
+      transform:skewX(-20deg);
+      animation: shineMove 4s linear infinite;
+      pointer-events:none;
+    }
+    @keyframes shineMove{
+      0%{left:-60%}
+      100%{left:160%}
+    }
+
+    @keyframes drop{
+      to{transform:translateY(120vh);opacity:0;}
+    }
+
+    /* responsive tweaks */
+    @media (max-width:520px){
+      .avatar{width:64px;height:64px;font-size:24px}
+      .message{font-size:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="hearts" aria-hidden="true"></div>
+    <header class="shine">
+      <div class="avatar" aria-hidden="true">G</div>
+      <div>
+        <h1>For Gunnu ❤️</h1>
+        <p class="lead">A tiny webpage made with big feelings.</p>
+      </div>
+    </header>
+    <section class="message" id="message" role="article" aria-label="Love message">
+      <p style="margin:0 0 8px 0; font-size:20px">Hey <strong>Gunnu</strong>,</p>
+      <p style="margin:0 0 10px 0">Tum meri duniya ka woh hissa ho jo sabse zyada khoobsurat hai.  
+      Jab tum meri zindagi me aayi, sab kuch badal gaya — rang aur gehre ho gaye, sapne aur meetha ho gaye.  
+      Tumhari ek muskaan… jaise saari thakaan mita de. Tumhari ek baat… jaise dil ko sukoon de.</p>
+      <p style="margin:0 0 10px 0">Main chahta hoon tum hamesha yaad rakho — tum meri duaon ka sabse khoobsurat jawaab ho.  
+      Chahe zindagi kitni bhi badal jaaye, tum meri kahani ka sabse pyara chapter hamesha raho gi.</p>
+      <p style="margin:0 0 10px 0">I love you… sirf aaj nahi, sirf kal nahi… <span class="heart">hamesha ❤️</span></p>
+      <p style="margin:0"><span class="bubble">Always yours</span></p>
+    </section>
+    <footer>
+      <button class="btn primary" id="surpriseBtn" aria-pressed="false">Surprise me ✨</button>
+      <button class="btn" id="copyBtn">Copy message</button>
+      <div style="margin-left:auto;opacity:0.8;font-size:13px">Made with ❤️</div>
+    </footer>
+  </div>
+
+  <script>
+    const copyBtn = document.getElementById('copyBtn');
+    const surpriseBtn = document.getElementById('surpriseBtn');
+    const heartsContainer = document.querySelector('.hearts');
+    const fullText = `Hey Gunnu,\n\nTum meri duniya ka woh hissa ho jo sabse zyada khoobsurat hai. Jab tum meri zindagi me aayi, sab kuch badal gaya — rang aur gehre ho gaye, sapne aur meetha ho gaye. Tumhari ek muskaan… jaise saari thakaan mita de. Tumhari ek baat… jaise dil ko sukoon de.\n\nMain chahta hoon tum hamesha yaad rakho — tum meri duaon ka sabse khoobsurat jawaab ho. Chahe zindagi kitni bhi badal jaaye, tum meri kahani ka sabse pyara chapter hamesha raho gi.\n\nI love you… sirf aaj nahi, sirf kal nahi… hamesha ❤️\nAlways yours`;
+
+    function createFloatingHeart(opts = {}) {
+      const heart = document.createElement('div');
+      heart.textContent = opts.char || ['❤️','💖','💘','💕','💓'][Math.floor(Math.random()*5)];
+      heart.classList.add('floating-heart');
+      heart.style.left = (opts.left !== undefined ? opts.left : Math.random()*100) + '%';
+      heart.style.bottom = (opts.bottom !== undefined ? opts.bottom : (-10 - Math.random()*40)) + 'px';
+      heart.style.fontSize = (opts.size || (14 + Math.random()*28)) + 'px';
+      heart.style.animationDuration = (opts.duration || (4 + Math.random()*4)) + 's';
+      heart.style.opacity = (opts.opacity || (0.7 + Math.random()*0.3));
+      heart.style.transform = `translateY(0) rotate(${Math.random()*40-20}deg)`;
+      heartsContainer.appendChild(heart);
+      setTimeout(()=>heart.remove(), 9000);
+    }
+
+    // gentle steady hearts
+    const steadyInterval = setInterval(()=> createFloatingHeart(), 900);
+
+    copyBtn.addEventListener('click', async ()=>{
+      try{
+        await navigator.clipboard.writeText(fullText);
+        copyBtn.textContent = 'Copied!';
+        setTimeout(()=> copyBtn.textContent='Copy message',1500);
+      }catch(e){
+        alert('Copy failed — select and press Ctrl+C');
+      }
+    });
+
+    surpriseBtn.addEventListener('click', ()=>{
+      surpriseBtn.setAttribute('aria-pressed','true');
+      // heart explosion center
+      for(let i=0;i<40;i++){
+        setTimeout(()=> createFloatingHeart({
+          left: 45 + Math.random()*10,
+          bottom: 60 + Math.random()*20,
+          size: 16 + Math.random()*28,
+          duration: 2 + Math.random()*2,
+          opacity: 0.9,
+          char: ['💖','💘','💕'][Math.floor(Math.random()*3)]
+        }), i*20);
+      }
+      // rain from top
+      for(let i=0;i<50;i++){
+        const h = document.createElement('div');
+        h.textContent = ['💖','💕','💘'][Math.floor(Math.random()*3)];
+        h.style.position='fixed';
+        h.style.left=(Math.random()*100)+'%';
+        h.style.top='-20px';
+        h.style.fontSize=(12+Math.random()*28)+'px';
+        h.style.opacity=0.95;
+        h.style.zIndex=9999;
+        h.style.transition='transform 3.5s linear, opacity 3.5s linear';
+        document.body.appendChild(h);
+        setTimeout(()=>{ h.style.transform = `translateY(${120 + Math.random()*60}vh) rotate(${Math.random()*360}deg)`; h.style.opacity='0' }, 50 + Math.random()*200);
+        setTimeout(()=>h.remove(),3800 + Math.random()*400);
+      }
+      setTimeout(()=> surpriseBtn.setAttribute('aria-pressed','false'), 1500);
+    });
+
+    // small accessibility: allow keyboard trigger for surprise (Enter/Space)
+    surpriseBtn.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); surpriseBtn.click(); }
+    });
+  </script>
+</body>
+</html>
